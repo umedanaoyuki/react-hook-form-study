@@ -13,7 +13,7 @@ const App = () => {
     const { register,
         handleSubmit,
         formState: { errors},
-    } = useForm({mode: "onChange"});
+    } = useForm({mode: "onChange", resolver: });
 
     const onSubmit = (data: LoginForm) => {
         console.log(data);
