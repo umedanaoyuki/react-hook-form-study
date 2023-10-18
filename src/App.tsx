@@ -4,6 +4,7 @@ const App = () => {
 
   return (
     <div className="form-container">
+        <h1>ログインフォーム</h1>
         <form>
             <label htmlFor="name">名前</label>
             <input id="name" type="text" />
