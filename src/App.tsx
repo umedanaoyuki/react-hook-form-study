@@ -1,6 +1,8 @@
 import './App.css'
 import {useForm} from "react-hook-form";
 import React from "react";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {validationSchema} from "./utils/validationSchema.ts";
 
 interface LoginForm {
     name: string;
@@ -13,7 +15,7 @@ const App = () => {
     const { register,
         handleSubmit,
         formState: { errors},
-    } = useForm({mode: "onChange", resolver: });
+    } = useForm({mode: "onChange", resolver: zodResolver(validationSchema)});
 
     const onSubmit = (data: LoginForm) => {
         console.log(data);
