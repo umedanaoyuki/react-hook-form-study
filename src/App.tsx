@@ -7,7 +7,7 @@ const App = () => {
     const { register,
         handleSubmit,
         formState: { errors},
-    } = useForm();
+    } = useForm({mode: "onChange"});
 
     const onSubmit = (data: any) => {
         console.log(data);
