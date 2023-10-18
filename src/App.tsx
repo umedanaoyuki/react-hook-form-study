@@ -22,9 +22,12 @@ const App = () => {
             <p>{errors.name?.message as React.ReactNode}</p>
             <label htmlFor="mail">メールアドレス</label>
             <input id="mail" type="email" {...register("mail", {required: "メールアドレスは必須です。"})}/>
+            <p>{errors.mail?.message as React.ReactNode}</p>
             <label htmlFor="password">パスワード</label>
             <input id="password" type="password" {...register("password", {required: "パスワードは必須です。"})}/>
+            <p>{errors.password?.message as React.ReactNode}</p>
             <button type="submit">送信</button>
+
         </form>
     </div>
   )
