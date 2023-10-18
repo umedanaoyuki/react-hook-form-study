@@ -1,7 +1,14 @@
 import './App.css'
+import {useForm} from "react-hook-form";
 
 const App = () => {
 
+    const { register, handleSubmit, formState: {errors}} = useForm();
+
+    const onSubmit = (data: any) => {
+        console.log(data);
+    };
+    
   return (
     <div className="form-container">
         <h1>ログインフォーム</h1>
