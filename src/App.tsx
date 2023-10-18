@@ -2,6 +2,12 @@ import './App.css'
 import {useForm} from "react-hook-form";
 import React from "react";
 
+interface LoginForm {
+    name: string;
+    email: string;
+    password: string;
+}
+
 const App = () => {
 
     const { register,
@@ -9,7 +15,7 @@ const App = () => {
         formState: { errors},
     } = useForm({mode: "onChange"});
 
-    const onSubmit = (data: any) => {
+    const onSubmit = (data: LoginForm) => {
         console.log(data);
     };
 
